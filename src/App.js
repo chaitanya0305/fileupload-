@@ -1,15 +1,19 @@
 // App.js
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import SignIn from './signin';
 import FileUpload from './FileUpload';
 
-
-function App() {
+const App = () => {
   return (
-    <div>
-      <h1>File Upload App</h1>
-      <FileUpload />
-    </div>
+    <Router>
+       <Routes>
+      <Route path="/" element={<Navigate to="/signin" />} />
+      <Route path="/signin" element={<SignIn />} />
+      <Route path="/file-upload" element={<FileUpload />} />
+    </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
