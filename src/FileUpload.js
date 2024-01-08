@@ -4,7 +4,7 @@ import axios from 'axios';
 import CloudFilesSVG from './undraw_cloud_files_wmo8.svg'; // Adjust the path accordingly
 
 const mainColor = '#5f6982';
-const darkGrey = '#595959'; // Dark grey color
+const darkGrey = ' #e6e6e6'; // Dark grey color
 
 const FileUpload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -60,15 +60,16 @@ const outerBoxStyles = {
   alignItems: 'center',
   minHeight: '100vh',
   backgroundColor: darkGrey, // Dark grey background color
-  border: `2px solid ${mainColor}`, // Border color using main color
+  border: `0px solid ${mainColor}`, // Border color using main color
   margin: '10px', // Subtle black margin
   boxShadow: `0 0 20px rgba(0, 0, 0, 0.8)`, // Deep shadow effect
   transition: 'border-color 0.3s ease', // Smooth transition for border color change
 };
 
 const innerBoxStyles = {
-  border: `2px outset ${mainColor}`, // 2px outset blue border
-  padding: '40px', // Increase the padding to increase the inside box size
+  border: `0px outset ${mainColor}`, // 2px outset blue border
+  padding: '40px',
+  borderRadius: '10px',
   textAlign: 'center',
   marginBottom: '40px', // Increase the margin at the bottom
   display: 'flex',
@@ -76,6 +77,10 @@ const innerBoxStyles = {
   alignItems: 'center', // Center vertically
   backgroundColor: '#f5f5f5', // Light grey background color
   boxShadow: `0 0 15px rgba(0, 0, 0, 0.5)`, // Light shadow effect
+  width: '60%', // Adjust the width as needed
+  height:'300px',
+  marginLeft: 'auto',
+  marginRight: 'auto',
 };
 
 const headingStyles = {
